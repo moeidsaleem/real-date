@@ -1,0 +1,101 @@
+page-contactlist {
+    .bg-theme {
+        background: #efefef !important;
+    }
+    h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        padding: 19px 10px 8px 22px;
+        font-weight: 600;
+        color: #898989;
+    }
+    .list {
+        margin-top: 0px;
+        margin-bottom: 0;
+        background: none;
+        .item {
+            padding: 8px 3px 8px 18px;
+            box-shadow: none;
+            width: 100%;
+            margin-bottom: 0px;
+            border-bottom: 1px solid #c7c7c7 !important;
+            align-items: flex-start;
+            border-radius: 0px;
+            position: relative;
+            ion-avatar {
+                width: 60px;
+                height: 60px;
+                margin-right: 16px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: -50%;
+                    right: -50%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    margin: auto;
+                    bottom: 0;
+                    width: unset;
+                    height: unset;
+                }
+            }
+            .label {
+                text-overflow: unset;
+                white-space: normal;
+                h3 {
+                    margin-top: 3px;
+                    color: #000;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin-bottom: 10px !important;
+                }
+            }
+            p {
+                font-size: 1.15rem;
+                letter-spacing: .5px;
+                color: #595959;
+                font-weight: 300;
+                margin-top: 0;
+                &[item-end] {
+                    margin-top: 16px;
+                    border-radius: 50%;
+                    font-size: .9rem;
+                    line-height: 18px;
+                    color: #fff;
+                    width: 18px;
+                    height: 18px;
+                    text-align: center;
+                    background: $red;
+                }
+            }
+            &:last-child {
+                border-bottom: 1px solid rgba(199, 199, 199, 0) !important;
+            }
+        }
+        &.unread {
+            .item {
+                .label {
+                    h3 {
+                        color: $red;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 27px;
+                    bottom: 0;
+                    right: 0;
+                    left: 12px;
+                    background: #4cd964;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    display: block;
+                }
+            }
+        }
+    }
+}

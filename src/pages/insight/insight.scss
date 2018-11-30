@@ -1,0 +1,108 @@
+page-insight {
+    .toolbar .back-button {
+        position: relative !important;
+    }
+    .card {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 5px;
+        .segment {
+            width: 284px;
+            margin: 0 auto;
+            .segment-button {
+                background: $white !important;
+                width: 100%;
+                min-height: unset;
+                border: none !important;
+                position: relative;
+                font-size: 1.1rem;
+                padding-top: 0px;
+                height: unset;
+                text-transform: none;
+                color: #c5c5c5;
+                border-bottom: none;
+                font-weight: 400;
+                opacity: unset;
+                line-height: 15px;
+                &.segment-activated {
+                    border-bottom: none;
+                    color: $red;
+                    background: $white;
+                    font-weight: 700;
+                }
+            }
+        }
+        .tab {
+            background: $white;
+            padding-bottom: 15px;
+            .row {
+                .col {
+                    h2 {
+                        margin: 0;
+                        font-size: 3.5rem;
+                        font-weight: 700;
+                        padding-top: 20px;
+                        padding-bottom: 0;
+                    }
+                    p {
+                        margin: 0;
+                        font-size: .8rem;
+                        font-weight: 700 !important;
+                        small {
+                            font-size: .7rem;
+                            color: #c5c5c5;
+                            display: block;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        h2 {
+            margin: 0;
+            padding: 18px;
+            font-size: 1.4rem;
+            font-weight: 700 !important;
+        }
+        .d-flex {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            .graph_details {
+                display: flex;
+                align-items: center;
+                transform: rotate(-90deg);
+                margin-right: auto;
+                position: absolute;
+                left: -45px;
+                overflow: hidden;
+                p {
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: .9rem;
+                    padding-left: 20px;
+                    position: relative;
+                    min-width: 61px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 10px;
+                        height: 10px;
+                        display: block;
+                        background: $red;
+                    }
+                    &.wows {
+                        &::before {
+                            background: #dcdcdc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

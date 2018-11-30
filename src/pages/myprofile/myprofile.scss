@@ -1,0 +1,207 @@
+page-myprofile {
+    .header {
+        .toolbar-content {
+            .toolbar-title {
+                padding-right: 6px !important;
+                img {
+                    &.logo {
+                        width: 95px;
+                        position: absolute;
+                        right: 0;
+                        margin: 0 auto;
+                        left: 0;
+                    }
+                }
+                span {
+                    background: $red !important;
+                    padding: 9px 16px !important;
+                    border-radius: 50px;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    display: block;
+                }
+            }
+        }
+    }
+    .profile-box {
+        background: $white;
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 10px;
+        .row {
+            align-items: center;
+            text-align: center;
+            .col {
+                .profile-img {
+                    border-radius: 50%;
+                    position: relative;
+                    overflow: hidden;
+                    height: 85px;
+                    width: 85px;
+                    margin: 0 auto;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: -50%;
+                        right: -50%;
+                        min-width: 100%;
+                        min-height: 100%;
+                        margin: auto;
+                        bottom: 0;
+                    }
+                }
+            }
+            &.profile-name {
+                align-items: flex-start;
+                .col {
+                    position: relative;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    .icon-img {
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 2;
+                        background: $white;
+                        box-shadow: 0 9px 16px -1px rgba(0, 0, 0, 0.1);
+                        margin: 0 auto;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: -50%;
+                            right: -50%;
+                            width: 100%;
+                            min-height: 100%;
+                            margin: auto;
+                            bottom: 0;
+                        }
+                    }
+                    h3 {
+                        margin: 0;
+                        position: relative;
+                        font-size: 1.5rem;
+                        z-index: 1;
+                        top: -1px;
+                    }
+                    h6 {
+                        margin: 0;
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        padding-top: 13px;
+                    }
+                    p {
+                        font-weight: 500;
+                        font-size: 1.3rem;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+        .segment {
+            width: 200px;
+            margin: 0 auto;
+            .segment-button {
+                background: $white !important;
+                width: 100%;
+                min-height: 4rem;
+                border: none !important;
+                position: relative;
+                font-size: 1.4rem;
+                padding-top: 0px;
+                height: unset;
+                text-transform: none;
+                color: $black-color;
+                border-bottom: none;
+                font-weight: 700;
+                opacity: unset;
+                &.segment-activated {
+                    border-bottom: none;
+                    color: $black-color;
+                    background: $white;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        width: 70px;
+                        height: 2px;
+                        display: block;
+                        background: $red;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    .gallery {
+        .row {
+            padding: 0 8px;
+            margin: 0;
+            .col {
+                padding: 0;
+                padding: 0 3px;
+                padding-bottom: 6px;
+                .img-box {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 106px;
+                    border-radius: 7px;
+                    background: $red;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: -50%;
+                        right: -50%;
+                        width: 100%;
+                        min-height: 100%;
+                        margin: auto;
+                        bottom: 0;
+                    }
+                    ion-icon {
+                        top: 0;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        font-size: 2.5rem;
+                        width: 23px;
+                        height: 23px;
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        background: $white;
+        border-radius: 10px 10px 0px 0px;
+        padding: 5px 28px;
+        padding-bottom: 20px;
+        .text {
+            padding-top: 28px;
+            h2 {
+                margin: 0;
+                font-size: 1.4rem;
+                font-weight: 700;
+                padding-bottom: 8px;
+            }
+            p {
+                margin: 0;
+                font-weight: 500;
+                font-size: 1.25rem;
+                line-height: 18px;
+                span {
+                    color: $red;
+                    font-size: 1.28rem;
+                    font-weight: 500;
+                    letter-spacing: .5px;
+                    padding-right: 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

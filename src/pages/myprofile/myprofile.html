@@ -1,0 +1,95 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <ion-title><img src="assets/imgs/logo_blk.png" class="logo"><span (click)="insight()" class="text-white">Insight</span></ion-title>
+        </ion-title>
+    </ion-navbar>
+    <div class="profile-box">
+        <ion-row padding-top>
+            <ion-col col-4>
+            </ion-col>
+            <ion-col col-4>
+                <div class="profile-img">
+                    <img src="assets/imgs/man2.png">
+                </div>
+            </ion-col>
+            <ion-col col-4>
+            </ion-col>
+        </ion-row>
+        <ion-row class="profile-name">
+            <ion-col col-3 (click)="setting()">
+                <div class="icon-img">
+                    <img src="assets/imgs/ic_settings.png">
+                </div>
+                <h3 text-center class="text-light">Settings</h3>
+            </ion-col>
+            <ion-col col-6 class="text-black ">
+                <h6 class="text-ellipsis">{{user?.name}}</h6>
+                <p class="text-ellipsis">{{user?.age}}, {{user?.gender}}</p>
+            </ion-col>
+            <ion-col col-3 (click)="editprofile()">
+                <div class="icon-img">
+                    <img src="assets/imgs/ic_edit.png">
+                </div>
+                <h3 text-center class="text-light">Edit Info</h3>
+            </ion-col>
+        </ion-row>
+        <ion-segment [(ngModel)]="all_about">
+            <ion-segment-button value="gallery" class="gallery">
+                Gallery
+            </ion-segment-button>
+            <ion-segment-button value="about" class="about">
+                About
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+</ion-header>
+
+<ion-content class="bg-theme">
+    <div [ngSwitch]="all_about">
+        <div *ngSwitchCase="'gallery'" class="" no-lines class="gallery">
+            <ion-row>
+              <ion-item >
+                <ion-avatar item-left *ngIf="user">
+                  <img [src]="user.photo">
+                </ion-avatar>
+                <h2></h2>
+                <p>Areena Liked your profile.</p>
+              </ion-item>
+                <ion-col col-4>
+                    <div class="img-box">
+                        <!--                        <img src="assets/imgs/man2.png">-->
+                        <ion-icon name="md-camera" class="text-white"></ion-icon>
+                    </div>
+                </ion-col>
+                <ion-col col-4 *ngFor="let slide of profile" (click)="profileimg()">
+                    <div class="img-box">
+                        <img [src]="slide.image" class="slide-image" />
+                    </div>
+                </ion-col>
+                          </ion-row>
+        </div>
+
+        <div *ngSwitchCase="'about'" class="about" no-lines>
+            <div class="text">
+                <h2>About {{user?.name}}</h2>
+                <p>{{user?.bio}}.</p>
+            </div>
+            <div class="text">
+                <h2>Work</h2>
+                <p>{{user?.work}}</p>
+            </div>
+            <div class="text">
+                <h2>Interest in</h2>
+                <p>{{user?.interest }}</p>
+            </div>
+            <div class="text">
+                <h2>Hobbies</h2>
+                <p><span>Travelling</span> <span>Eating</span> <span>Pointing</span> <span>Phtogrophy</span> <span>Singing</span>
+                    <span>Coin Colletion</span></p>
+            </div>
+        </div>
+    </div>
+    <!--    <h6 (click)="profileimg()">Profile img</h6>-->
+    <!--    <h6 (click)="match()">Match</h6>-->
+</ion-content>

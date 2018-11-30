@@ -1,0 +1,121 @@
+page-signup {
+  .signup{
+    font-weight: bolder;text-decoration: underline;
+  }
+
+  .small{
+    background:transparent
+  }
+  .add-img {
+    position: relative;
+    padding-top: 10px;
+    padding: 0;
+    top:90px;
+    .img-box {
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        height: 85px;
+        width: 85px;
+        margin: 0 auto;
+        img {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-height: 100%;
+            margin: auto;
+        }
+    }
+    ion-icon {
+        position: absolute;
+        top: 0;
+        right: -78px;
+        left: 0;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        padding: 8px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        background: $red;
+    }
+}
+  .emailx{
+    background: #48c84f !important;
+    &:hover,
+    &:focus,
+    &:active {
+        background: #1d62b1 !important;
+    }
+  }
+    .bg-img {
+        background-image: url(../assets/pexel.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .logo {
+        margin: auto;
+        text-align: center;
+        width: 160px;
+        margin-top: 3rem;
+    }
+    .fixed-bottom {
+        padding: 0 30px;
+        bottom: 22px;
+        .button {
+            margin-bottom: 15px;
+            img {
+                width: 19px;
+                margin-right: 13px;
+            }
+            &.email{
+              background: #48c84f !important;
+              &:hover,
+              &:focus,
+              &:active {
+                  background: #1d62b1 !important;
+              }
+            }
+            &.fb {
+                background: #2672ca !important;
+                &:hover,
+                &:focus,
+                &:active {
+                    background: #1d62b1 !important;
+                }
+            }
+            &.google {
+                background: $white!important;
+                color: $black-color !important;
+                &:hover,
+                &:focus,
+                &:active {
+                    background: $white !important;
+                }
+                img {
+                    left: -20px;
+                    width: 18px;
+                    position: relative;
+                    margin-right: -6px;
+                }
+            }
+        }
+        p {
+            margin: 0;
+            font-size: .9rem;
+            margin-top: 22px;
+        }
+    }
+    @media(max-width: 330px) {
+        .fixed-bottom {
+            padding: 0 26px;
+            p {
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+page-setting {
+    .bg-theme {
+        background: #efefef !important;
+    }
+    .header .toolbar .back-button {
+        position: relative;
+    }
+    .header {
+        .toolbar {
+            .toolbar-content {
+                .toolbar-title {
+                    span {
+                        padding-top: 0;
+                        font-size: 1.75rem;
+                        font-weight: 700;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        padding: 27px 28px;
+        padding-bottom: 10px;
+        color: #898989;
+    }
+    .list {
+        background: $white;
+        padding: 26px 29px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        margin: 0;
+        h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .row {
+            margin: 0 -11px;
+        }
+        .item {
+            margin-bottom: 32px;
+            padding-left: 0;
+            .item-inner {
+                padding: 0;
+            }
+            &.item-radio {
+                margin-top: 15px;
+                padding: 0;
+                width: 100%;
+                background: #e0e0e0;
+                border-radius: 50px;
+                min-height: 5rem;
+                .label {
+                    position: absolute;
+                    margin: 0;
+                    width: 100%;
+                    left: 0;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    height: 44px;
+                    padding-top: 14px;
+                }
+                .radio {
+                    .radio-icon {
+                        display: none;
+                    }
+                }
+                &.item-radio-checked {
+                    background: $red !important;
+                }
+            }
+            &.item-range {
+                .range {
+                    padding: 0 !important;
+                    display: block;
+                    [range-left],
+                    [range-right] {
+                        margin: 0;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        color: #000;
+                    }
+                    [range-right] {
+                        margin: 0;
+                        position: relative;
+                        width: 100%;
+                        top: -58px;
+                        display: block;
+                        text-align: right;
+                    }
+                    .range-bar {
+                        &.range-bar-active {
+                            background: $red;
+                        }
+                    }
+                    .range-pin {
+                        background: $red;
+                        &::before {
+                            background: $red;
+                        }
+                    }
+                    .range-knob {
+                        background: $red;
+                        width: 22px;
+                        height: 22px;
+                        top: 11px;
+                    }
+                }
+            }
+            &.distance {
+                margin-bottom: 8px;
+            }
+        }
+        &.notification {
+            padding: 20px 29px;
+            padding-bottom: 9px;
+            .item {
+                min-height: unset;
+                margin-bottom: 0px;
+                .label {
+                    margin: 0;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+                .toggle {
+                    &.toggle-checked {
+                        .toggle-icon {
+                            background: rgba(255, 12, 0, 0.17);
+                            .toggle-inner {
+                                background: $red,
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

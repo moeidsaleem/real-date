@@ -1,0 +1,33 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title>
+
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-thime">
+    <div class="bg-img" *ngIf="user">
+        <img  [src]="user.photo">
+    </div>
+    <div class="logo" >
+        <img  src="assets/imgs/matchimg.png">
+    </div>
+    <div class="profile" text-center>
+        <div class="profile-img">
+            <img  *ngIf="user" [src]="user.photo">
+        </div>
+        <div class="text text-white">
+            <h6>{{user?.name}}</h6>
+            <p>{{user?.age}}, {{user?.gender}}</p>
+        </div>
+    </div>
+    <div class="fixed-bottom">
+        <button ion-button full class="btn" round icon-start>
+              <ion-icon name="md-text" padding-right></ion-icon>Send a Message
+        </button>
+        <button ion-button full class="btn not-now" round icon-start (click)="notNow()">
+            Not Now
+         </button>
+    </div>
+</ion-content>

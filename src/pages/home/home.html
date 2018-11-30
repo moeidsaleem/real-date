@@ -1,14 +1,62 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title>
+          <img src="assets/imgs/logo_blk.png" class="logo">
+          <span class="text-white" (click)="destinopro()"></span>
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="bg-theme">
+
+
+<div *ngIf="user">
+    <div class="img-box">
+        <div class="fixed">
+            <ion-icon name="ios-arrow-back-outline"  (click)="previousUser()" ></ion-icon>
+            <ion-icon name="ios-arrow-forward-outline" (click)="nextUser()" class="ml-auto" text-right></ion-icon>
+        </div>
+        <img [src]="user?.photo" class="">
+        <div class="text">
+            <!-- <p class="online text-white">{{res?.status || 'offline'}}</p> -->
+            <p class="icon-box text-white" text-center>
+                <ion-icon name="ios-arrow-up"></ion-icon>
+                <ion-icon name="ios-arrow-up" class="bottm-icon"></ion-icon>
+            </p>
+            <!-- <p class="text-white ml-auto" text-right>400 mt away</p> -->
+        </div>
+    </div>
+    <div class="profile-box">
+        <ion-row class="profile-name">
+            <ion-col col-3 class="icon">
+                <div class="icon-img " id="imgxx" (click)="match()">
+                    <img  src="assets/imgs/couple.png">
+
+
+                  </div>
+                <h3 text-center class="text-light">Match</h3>
+            </ion-col>
+            <ion-col col-6 text-center class="name" (click)="profile()">
+                <div class="profile-img">
+                    <!-- <img [src]="user.photo"> -->
+                </div>
+
+                <h6 class="text-ellipsis text-black">{{user?.name}}</h6>
+                <hr>
+                <h3 style="text-decoration:underline">OFFERS</h3>
+                <p class=" text-black">{{user?.bio}}</p>
+
+                <p class="text-ellipsis text-black">{{user?.age}}, {{user?.gender}}</p>
+            </ion-col>
+            <ion-col col-3 class="icon">
+                <div class="icon-img" (click)="wow()">
+                    <img *ngIf="user.liked == true" src="assets/imgs/heart.ico">
+                    <img *ngIf="user.liked == false" src="assets/imgs/heart-outline.png">
+                </div>
+                <h3 text-center class="text-light small" *ngIf="user.liked == true">Unlike</h3>
+                <h3 text-center class="text-light small" *ngIf="user.liked == false">Like</h3>
+            </ion-col>
+        </ion-row>
+    </div>
+    </div>
 </ion-content>

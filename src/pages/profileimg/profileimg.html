@@ -1,0 +1,28 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title>
+            Emili Johnson
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!--
+<div class="slider">
+    <img src="assets/imgs/img1.png">
+</div>
+-->
+    <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+            <img [src]="slide.image" class="slide-image" />
+        </ion-slide>
+    </ion-slides>
+    <div class="fixed">
+        <ion-icon name="ios-arrow-back-outline"></ion-icon>
+        <ion-icon name="ios-arrow-forward-outline" class="ml-auto" text-right></ion-icon>
+    </div>
+    <div class="fixed-bottom">
+        <img src="assets/imgs/ic_nope.png">
+        <img src="assets/imgs/ic_wow.png" class="ml-auto">
+    </div>
+</ion-content>

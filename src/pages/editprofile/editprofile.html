@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Edit Profile <span class="text-red" (click)="updateProfile()">Save</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="user">
+    <div class="add-img">
+        <div class="img-box">
+            <img [src]="user.photo">
+        </div>
+        <ion-icon name="md-camera" class="text-white"></ion-icon>
+    </div>
+
+    <ion-list no-lines>
+        <ion-item>
+            <ion-label padding-right class="text-black">Full Name</ion-label>
+            <ion-input type="text" placeholder="Enter Name..." [(ngModel)]="user.name" text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black">Age</ion-label>
+            <ion-input type="number" text-right placeholder="30 Dec, 1990"  [(ngModel)]="user.age"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black">Gender</ion-label>
+            <ion-select [(ngModel)]="user.gender">
+                <ion-option value="male">Male</ion-option>
+                <ion-option value="female">Female</ion-option>
+            </ion-select>
+            <ion-icon name="ios-arrow-down-outline" item-end></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black" >Interest in</ion-label>
+            <ion-select [(ngModel)]="user.interest">
+                <ion-option value="female">Female</ion-option>
+                <ion-option value="male">Male</ion-option>
+                <ion-option value="both">Both</ion-option>
+            </ion-select>
+            <ion-icon name="ios-arrow-down-outline" item-end></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black">Short bio</ion-label>
+            <ion-textarea class="short_dio" [(ngModel)]="user.bio" type="text" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black" stacked>Work</ion-label>
+            <ion-input type="text"  [(ngModel)]="user.work" placeholder="Senior Designer at Rainbow tech labs." style="margin-left: 0;"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label padding-right class="text-black">Hobbies</ion-label>
+            <ion-textarea type="text"  [(ngModel)]="user.hobbies" placeholder="Photography Painting rock climbing traveling"></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>

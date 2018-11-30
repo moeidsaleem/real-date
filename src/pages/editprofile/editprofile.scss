@@ -1,0 +1,151 @@
+page-editprofile {
+    .header .toolbar .back-button {
+        position: relative;
+    }
+    .header {
+        .toolbar {
+            .toolbar-content {
+                .toolbar-title {
+                    span {
+                        padding-top: 0;
+                        font-size: 1.75rem;
+                        font-weight: 700;
+                        padding-right: 10px
+                    }
+                }
+            }
+        }
+    }
+    .add-img {
+        position: relative;
+        padding-top: 20px;
+        padding: 0;
+        .img-box {
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            height: 85px;
+            width: 85px;
+            margin: 0 auto;
+            img {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                min-height: 100%;
+                margin: auto;
+            }
+        }
+        ion-icon {
+            position: absolute;
+            top: 0;
+            right: -78px;
+            left: 0;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            padding: 8px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: $red;
+        }
+    }
+    .list {
+        border-bottom: none !important;
+        .item {
+            padding-bottom: 20px;
+            border: none !important;
+            .item-inner {
+                box-shadow: none !important;
+                .label {
+                    font-size: 1.4rem;
+                    font-weight: bold !important;
+                    max-width: 50%;
+                }
+                ion-input {
+                    border: none !important;
+                    border-bottom: 0.55px solid #ededed !important;
+                    margin-left: 40px;
+                    font-size: 1.3rem;
+                    font-weight: 400 !important;
+                    color: $black-color;
+                     ::-webkit-input-placeholder,
+                     ::-moz-placeholder,
+                     :-ms-input-placeholder,
+                     :-moz-placeholder {
+                        color: $black-color !important;
+                    }
+                    input {
+                        border: none !important;
+                        margin-bottom: 9px;
+                    }
+                }
+            }
+            &.item-select {
+                align-items: center;
+                .select {
+                    border: none !important;
+                    margin-left: auto;
+                    max-width: unset;
+                    align-items: center;
+                    padding: 0;
+                    .select-icon {
+                        display: none;
+                    }
+                    .select-text {
+                        font-size: 1.3rem;
+                        font-weight: 400 !important;
+                        color: $black-color !important;
+                        border-bottom: 0.55px solid #ededed !important;
+                        position: absolute;
+                        width: calc(100% - 152px);
+                        right: 0;
+                        text-align: right;
+                        padding-right: 29px;
+                        padding-bottom: 6px;
+                    }
+                }
+                ion-icon {
+                    font-size: 1.3rem;
+                    &[item-end] {
+                        margin: 0;
+                        margin-top: 8px;
+                        min-width: 16px;
+                        text-align: right;
+                    }
+                }
+            }
+            &.item-textarea {
+                display: block;
+                .input-wrapper {
+                    display: block;
+                    ion-textarea {
+                        border: none !important;
+                        border-bottom: 0.55px solid #ededed !important;
+                        font-size: 1.3rem;
+                        font-weight: 400 !important;
+                        padding-bottom: 5px;
+                        color: $black-color;
+                         ::-webkit-input-placeholder,
+                         ::-moz-placeholder,
+                         :-ms-input-placeholder,
+                         :-moz-placeholder {
+                            color: $black-color !important;
+                        }
+                    }
+                    textarea {
+                        margin: 0;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+        .text-input-wp {
+            border: none !important;
+            padding-left: 0;
+        }
+    }
+}

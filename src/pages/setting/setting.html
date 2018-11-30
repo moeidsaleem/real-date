@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Settings <span class="text-red" (click)="logout()">Logout</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-theme">
+    <h2>Discovery settings</h2>
+    <ion-list no-lines>
+        <h3 class="text-black" padding-bottom>Show me</h3>
+        <ion-row radio-group>
+            <ion-col col-4>
+                <ion-item>
+                    <ion-label>Male</ion-label>
+                    <ion-radio value="male"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-4>
+                <ion-item>
+                    <ion-label>Female</ion-label>
+                    <ion-radio checked="true" value="female"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-4>
+                <ion-item>
+                    <ion-label>Both</ion-label>
+                    <ion-radio value="both"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-item>
+            <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+                <span range-left class="text-black">Age</span>
+                <span range-right class="text-red">18-25</span>
+            </ion-range>
+        </ion-item>
+        <ion-item class="distance">
+            <ion-range [(ngModel)]="brightness" ng-reflect-model="26 !important">
+                <span range-left class="text-black">Distance</span>
+                <span range-right class="text-red">35 km</span>
+            </ion-range>
+        </ion-item>
+    </ion-list>
+
+    <h2>Notification settings</h2>
+    <ion-list no-lines class="notification">
+        <ion-item>
+            <ion-label class="text-black">New Matches</ion-label>
+            <ion-toggle checked="true" valu="new-matches"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label class="text-black">Message</ion-label>
+            <ion-toggle value="message"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Chats <span class="text-red">  <ion-icon name="md-search"></ion-icon></span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-theme">
+    <h2>2 Unread Messages</h2>
+    <ion-list no-lines class="unread">
+        <ion-item (click)="chat()">
+            <ion-avatar item-start>
+                <img src="assets/imgs/profile.png">
+            </ion-avatar>
+            <h3 class="text-ellipsis">Emili Johnson</h3>
+            <p class="text-ellipsis">God to hear from you.</p>
+            <p class="" item-end>1</p>
+        </ion-item>
+        <ion-item (click)="chat()">
+            <ion-avatar item-start>
+                <img src="assets/imgs/img1.png">
+            </ion-avatar>
+            <h3 class="text-ellipsis">Treash John</h3>
+            <p class="text-ellipsis">Okey Catch you later.</p>
+            <p class="" item-end>1</p>
+        </ion-item>
+    </ion-list>
+    <h2> Messages</h2>
+    <ion-list no-lines>
+        <ion-item (click)="chat()">
+            <ion-avatar item-start>
+                <img src="assets/imgs/img1.png">
+            </ion-avatar>
+            <h3 class="text-ellipsis">Usho Kelly</h3>
+            <p class="text-ellipsis">Thank You.</p>
+        </ion-item>
+        <ion-item (click)="chat()">
+            <ion-avatar item-start>
+                <img src="assets/imgs/img1.png">
+            </ion-avatar>
+            <h3 class="text-ellipsis">Mynke Jeorge</h3>
+            <p class="text-ellipsis">See you soon.</p>
+        </ion-item>
+        <ion-item (click)="chat()">
+            <ion-avatar item-start>
+                <img src="assets/imgs/img1.png">
+            </ion-avatar>
+            <h3 class="text-ellipsis">Monika Johnson</h3>
+            <p class="text-ellipsis">Hahaha. You're so funny.</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

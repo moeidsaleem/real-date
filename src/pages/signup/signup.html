@@ -1,0 +1,81 @@
+<ion-content padding class="bg-img">
+    <div class="logo">
+        <img src="assets/imgs/Logo_wt.png">
+    </div>
+
+        <div class="add-img">
+              <div class="img-box">
+                  <img src="assets/imgs/man2.png">
+              </div>
+              <ion-icon name="md-camera" class="text-white"></ion-icon>
+          </div>
+
+    <ion-list style="margin-top:100px;border-radius: 30px">
+
+      <ion-item>
+        <ion-label class="text-black small">Email</ion-label>
+        <ion-input type="email" name="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="text-black small">Password</ion-label>
+      <ion-input type="password" placeholder="Password"[(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label class="text-black small">age</ion-label>
+      <ion-input type="number" placeholder="Age" [(ngModel)]="user.age"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label padding-right class="text-black">Gender</ion-label>
+      <ion-select [(ngModel)]="user.gender">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+      </ion-select>
+      <ion-icon name="ios-arrow-down-outline" item-end></ion-icon>
+  </ion-item>
+  <ion-item>
+      <ion-label class="text-black small">City</ion-label>
+      <ion-input type="text" placeholder="City" [(ngModel)]="user.city"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label class="text-black small">Country</ion-label>
+      <ion-input type="text" placeholder="Country" [(ngModel)]="user.country"></ion-input>
+  </ion-item>
+    </ion-list>
+
+   <!--  <ion-list style="margin-top:100px;border-radius: 30px">
+        <ion-item>
+          <ion-label class="text-black small">Phone</ion-label>
+          <ion-input type="phone" placeholder="Mobile Number" [(ngModel)]="user.phone"></ion-input>
+      </ion-item>
+      </ion-list>
+
+      <button ion-button full class="btn emailx" round icon-start (click)="tab()">
+         <ion-icon name="phone-portrait"></ion-icon> Connect with Phone
+         </button> -->
+    <button ion-button full class="btn emailx" round icon-start (click)="signup()">
+       <ion-icon name="mail"></ion-icon> Join with Email
+      </button>
+
+
+      <br>
+<ion-row text-center *ngIf="err">
+  <ion-col >
+      <p style="color:rgb(255, 0, 0);background-color:rgba(255, 255, 255, 0.781);padding:3px;border-radius: 30px"> <small> {{err}} </small></p>
+  </ion-col>
+</ion-row>
+<ion-row text-center (click)="login()">
+   <ion-col style="color:white">
+     Already Have an account? <b class="signup" >Login Now!</b>
+   </ion-col>
+</ion-row>
+
+    <div class="fixed-bottom">
+        <!-- <button ion-button full class="btn fb" round icon-start (click)="tab()">
+                 <img src="assets/imgs/ic_facebook.png">Connect with Facebook
+        </button>
+        <button ion-button full class="btn google" round icon-start (click)="tab()">
+                 <img src="assets/imgs/ic_google.png">Connect with Google
+            </button> -->
+        <p text-center class="text-white">By clicking start, you are agree to our <strong>terms & condition</strong></p>
+    </div>
+</ion-content>

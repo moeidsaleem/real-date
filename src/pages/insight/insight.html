@@ -1,0 +1,117 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Profile Insight
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-theme ">
+    <ion-card>
+        <div class="tab">
+            <ion-segment [(ngModel)]="profile">
+                <ion-segment-button value="today" class="">
+                    Today
+                </ion-segment-button>
+                <ion-segment-button value="this_week" class="">
+                    This week
+                </ion-segment-button>
+                <ion-segment-button value="this_month" class="">
+                    This month
+                </ion-segment-button>
+                <ion-segment-button value="all_time" class="">
+                    All time
+                </ion-segment-button>
+            </ion-segment>
+            <div [ngSwitch]="profile">
+                <div *ngSwitchCase="'today'" class="" class="this_week">
+                    <ion-row text-center>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">25</h2>
+                            <p class="text-ellipsis">Profile Views</p>
+                            <p><small class="text-ellipsis">+5 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">19</h2>
+                            <p class="text-ellipsis">Wows Received</p>
+                            <p><small class="text-ellipsis">+3 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">08</h2>
+                            <p class="text-ellipsis">Mathced</p>
+                            <p><small class="text-ellipsis">+4 from last week</small></p>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div *ngSwitchCase="'this_week'" class="" class="today">
+                    <ion-row text-center>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis"> 19</h2>
+                            <p class="text-ellipsis">Profile Views</p>
+                            <p><small class="text-ellipsis">+5 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">25</h2>
+                            <p class="text-ellipsis">Wows Received</p>
+                            <p><small class="text-ellipsis">+3 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">01</h2>
+                            <p class="text-ellipsis">Mathced</p>
+                            <p><small class="text-ellipsis">+4 from last week</small></p>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div *ngSwitchCase="'this_month'" class="" class="today">
+                    <ion-row text-center>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">08</h2>
+                            <p class="text-ellipsis">Profile Views</p>
+                            <p><small class="text-ellipsis">+5 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">20</h2>
+                            <p class="text-ellipsis">Wows Received</p>
+                            <p><small class="text-ellipsis">+3 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">00</h2>
+                            <p class="text-ellipsis">Mathced</p>
+                            <p><small class="text-ellipsis">+4 from last week</small></p>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div *ngSwitchCase="'all_time'" class="" class="today">
+                    <ion-row text-center>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">05</h2>
+                            <p class="text-ellipsis">Profile Views</p>
+                            <p><small class="text-ellipsis">+5 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">09</h2>
+                            <p class="text-ellipsis">Wows Received</p>
+                            <p><small class="text-ellipsis">+3 from last week</small></p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <h2 class="text-ellipsis">25</h2>
+                            <p class="text-ellipsis">Mathced</p>
+                            <p><small class="text-ellipsis">+4 from last week</small></p>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+        </div>
+    </ion-card>
+    <ion-card>
+        <h2>Wow rotlo</h2>
+        <img src="assets/imgs/graph-1.png">
+    </ion-card>
+    <ion-card>
+        <img src="assets/imgs/graph-2.png">
+
+    </ion-card>
+</ion-content>

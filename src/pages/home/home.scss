@@ -1,3 +1,247 @@
 page-home {
+    .header {
+        .toolbar-content {
+            .toolbar-title {
+                img {
+                    &.logo {
+                        width: 95px;
+                        position: absolute;
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                    }
+                }
+                span {
+                    background: $red !important;
+                    padding: 9px 16px !important;
+                    border-radius: 50px;
+                    font-size: 1.35rem;
+                    display: block;
+                }
+            }
+        }
+    }
 
+    .scroll-content {
+        padding: 0 22px;
+        .img-box {
+            position: relative;
+            width: 100%;
+            height: calc(80vh - 200px);
+            overflow: hidden;
+            border-radius: 13px;
+            img {
+                position: absolute;
+                top: 0;
+                left: -50%;
+                right: -50%;
+                width: 100%;
+                min-height: 100%;
+                border-radius: 13px;
+                margin: auto;
+                bottom: 0;
+            }
+            .fixed {
+              position: absolute;
+              top: 0;
+              width: 100%;
+              left: 0;
+              bottom: 0;
+              margin: auto;
+              height: 25px;
+              z-index: 1;
+              color: $white;
+              display: flex;
+              padding: 0 20px;
+              ion-icon {
+                  font-size: 2.5rem;
+                  display: block;
+                  &.ml-auto {
+                      margin-left: auto;
+                  }
+              }
+          }
+            .text {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                padding: 3px 18px;
+                padding-top: 57px;
+                background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgb(93, 135, 224) 100%);
+                background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(83, 30, 148, 1) 100%);
+                background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(83, 30, 148, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#531e94', GradientType=0);
+                p {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    margin: 0;
+                    position: relative;
+                    min-width: 33.33%;
+                    &.ml-auto {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    &.online {
+                        padding: 0 18px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            border-radius: 13px;
+                            margin: auto 0;
+                            width: 7px;
+                            height: 7px;
+                            display: block;
+                            border-radius: 50%;
+                            background: $green-color;
+                        }
+                    }
+                    &.icon-box {
+                        margin: 0 auto;
+                        position: relative;
+                        top: -27px;
+                        ion-icon {
+                            display: block;
+                            font-size: 1.5rem;
+                            &.bottm-icon {
+                                position: relative;
+                                top: -9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .profile-box {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            height: 30px;
+            padding: 0 22px;
+            .row {
+                position: relative;
+                top: -51px;
+                .col {
+                    &.icon {
+                        margin-top: 78px;
+                    }
+                    &.name {
+                        position: relative;
+                        top: -8px;
+                        h6 {
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            padding-top: 16px;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 1.3rem;
+                            margin-top: 4px;
+                        }
+                    }
+                    .profile-img {
+                        border-radius: 50%;
+                        position: relative;
+                        overflow: hidden;
+                        height: 80px;
+                        width: 80px;
+                        margin: 0 auto;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: -50%;
+                            right: -50%;
+                            width: 100%;
+                            min-height: 100%;
+                            border-radius: 50%;
+                            margin: auto;
+                            bottom: 0;
+                        }
+                    }
+                }
+                &.profile-name {
+                    align-items: flex-end;
+                    .col {
+                        .icon-img {
+                            border-radius: 50%;
+                            width: 60px;
+                            height: 60px;
+                            position: relative;
+                            overflow: hidden;
+                            z-index: 2;
+                            background: $white;
+                            box-shadow: 0 9px 19px -1px rgba(0, 0, 0, 0.3);
+                            margin: 0 auto;
+                            img {
+                                position: absolute;
+                                top: 0px;
+                                left: -50%;
+                                right: -50%;
+                                bottom: 0;
+                                border-radius: 50%;
+                                margin: auto;
+                            }
+                            #imgxx{
+                              position: absolute;
+                              top: 0px;
+                              left: -50%;
+                              right: -50%;
+                              bottom: 0;
+                              border-radius: 50%;
+                              background-color:blue;
+                              color:red;
+                              margin: auto;
+
+                          }
+                            ion-icon {
+                              position: absolute;
+                              color:white;
+                              background-color:rgb(87, 130, 224);
+                              top: 0px;
+                              left: -50%;
+                              right: -50%;
+                              bottom: 0;
+                              border-radius: 50%;
+                              margin: auto;
+                          }
+                        }
+                        .icon-imgx {
+                          border-radius: 50%;
+                          width: 60px;
+                          height: 60px;
+                          position: relative;
+                          overflow: hidden;
+                          z-index: 2;
+                          background: transparent;
+                          box-shadow: 0 9px 19px -1px rgba(0, 0, 0, 0.3);
+                          margin: 0 auto;
+                          img {
+                              position: absolute;
+                              top: 0px;
+                              left: -50%;
+                              right: -50%;
+                              bottom: 0;
+                              border-radius: 50%;
+                              margin: auto;
+                          }
+                      }
+                        h3 {
+                            margin: 0;
+                            position: relative;
+                            font-size: 2.3rem;
+                            z-index: 1;
+                            top: -5px;
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

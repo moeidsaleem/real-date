@@ -1,0 +1,83 @@
+    page-splash {
+      .signup{
+        font-weight: bolder;text-decoration: underline;
+      }
+
+      .small{
+        background:transparent
+      }
+      .emailx{
+        background: #48c84f !important;
+        &:hover,
+        &:focus,
+        &:active {
+            background: #1d62b1 !important;
+        }
+      }
+        .bg-img {
+            background-image: url(../assets/imgs/splash.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .logo {
+            margin: auto;
+            text-align: center;
+            width: 160px;
+            margin-top: 13rem;
+        }
+        .fixed-bottom {
+            padding: 0 30px;
+            bottom: 22px;
+            .button {
+                margin-bottom: 15px;
+                img {
+                    width: 19px;
+                    margin-right: 13px;
+                }
+                &.email{
+                  background: #48c84f !important;
+                  &:hover,
+                  &:focus,
+                  &:active {
+                      background: #1d62b1 !important;
+                  }
+                }
+                &.fb {
+                    background: #2672ca !important;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: #1d62b1 !important;
+                    }
+                }
+                &.google {
+                    background: $white!important;
+                    color: $black-color !important;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: $white !important;
+                    }
+                    img {
+                        left: -20px;
+                        width: 18px;
+                        position: relative;
+                        margin-right: -6px;
+                    }
+                }
+            }
+            p {
+                margin: 0;
+                font-size: .9rem;
+                margin-top: 22px;
+            }
+        }
+        @media(max-width: 330px) {
+            .fixed-bottom {
+                padding: 0 26px;
+                p {
+                    font-size: 0.9rem !important;
+                }
+            }
+        }
+    }

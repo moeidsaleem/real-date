@@ -1,0 +1,105 @@
+page-match {
+    .header {
+        .toolbar {
+            .toolbar-content {
+                .toolbar-title {
+                    color: $white !important;
+                }
+            }
+            .back-button {
+                color: $white !important;
+                .ion-md-arrow-back:before {
+                    content: "\f2c0" !important;
+                }
+                .ion-ios-arrow-back:before {
+                    content: "\f2c0" !important;
+                }
+            }
+        }
+    }
+    .scroll-content {
+        margin-top: 0 !important;
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            img {
+                position: absolute;
+                top: 0;
+                left: -50%;
+                right: -50%;
+                width: 100%;
+                min-height: 100%;
+                margin: auto;
+                bottom: 0;
+                filter: blur(2px);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: rgba(0, 0, 0, .7);
+            }
+        }
+        .logo {
+            position: relative;
+            width: 180px;
+            margin: 0 auto;
+            margin-top: 130px;
+            margin-bottom: 60px;
+        }
+        .profile {
+            .profile-img {
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                height: 140px;
+                width: 140px;
+                margin: 0 auto;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: -50%;
+                    right: -50%;
+                    width: 100%;
+                    min-height: 100%;
+                    margin: auto;
+                    bottom: 0;
+                }
+            }
+        }
+        .text {
+            position: relative;
+            padding-top: 25px;
+            h6 {
+                margin: 0;
+                font-size: 2rem;
+                padding-bottom: 5px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 1.5rem;
+                margin: 0;
+                font-weight: lighter;
+            }
+        }
+    }
+    .fixed-bottom {
+        padding: 0 30px;
+        bottom: 20px;
+        .button {
+            margin-bottom: 15px;
+            &.not-now {
+                background: rgba(0, 0, 0, 0) !important;
+                border: .5px solid $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<!--
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+(click)="dismiss()"
+-->
+
+<ion-content>
+    <ion-card>
+        <div class="banner">
+            <h1 text-center class="text-red">Get Destino Pro</h1>
+            <div class="slider-box">
+                <ion-slides pager text-center>
+                    <ion-slide *ngFor="let slide of slides">
+                        <div class="icon-img">
+                            <img [src]="slide.image" class="slide-image" />
+                        </div>
+                        <h2 [innerHTML]="slide.pack_type" class="text-ellipsis text-black"></h2>
+                        <p padding-left [innerHTML]="slide.description" class="text-ellipsis"></p>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+        <ion-list radio-group>
+            <ion-item>
+                <div class="radio-box" item-start>
+                    <ion-radio checked="true" value="super"></ion-radio>
+                    <ion-label class="text-black">Super Saver <br><small>$100 per month</small></ion-label>
+                </div>
+                <p item-end>
+                    <strong>12</strong>
+                    <small>
+                        Months <br><span>40% save</span>
+                    </small>
+                </p>
+            </ion-item>
+            <ion-item>
+                <div class="radio-box" item-start>
+                    <ion-radio value="popular" item-start></ion-radio>
+                    <ion-label  class="text-black">Popular <br><small>$150 per month</small></ion-label>
+                </div>
+                <p item-end>
+                    <strong>3</strong>
+                    <small>
+                        Months <br><span>40% save</span>
+                    </small>
+                </p>
+            </ion-item>
+            <ion-item>
+                <div class="radio-box" item-start>
+                    <ion-radio value="standard" item-start></ion-radio>
+                    <ion-label  class="text-black">Standard <br><small>$200 per month</small></ion-label>
+                </div>
+                <p item-end>
+                    <strong>1</strong>
+                    <small>
+                        Months <br><span>Trai Plan</span>
+                    </small>
+                </p>
+            </ion-item>
+        </ion-list>
+        <button ion-button full class="btn fb" round icon-start (click)="dismiss()">
+                 Continue
+        </button>
+    </ion-card>
+</ion-content>

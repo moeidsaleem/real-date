@@ -1,0 +1,49 @@
+<ion-content padding class="bg-img">
+    <div class="logo">
+        <img src="assets/imgs/Logo_wt.png">
+    </div>
+
+    <ion-list style="margin-top:100px;border-radius: 30px">
+      <ion-item>
+        <ion-label class="text-black small">Email</ion-label>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="text-black small">Password</ion-label>
+      <ion-input type="password" placeholder="Password"[(ngModel)]="user.password"></ion-input>
+  </ion-item>
+    </ion-list>
+
+   <!--  <ion-list style="margin-top:100px;border-radius: 30px">
+        <ion-item>
+          <ion-label class="text-black small">Phone</ion-label>
+          <ion-input type="phone" placeholder="Mobile Number" [(ngModel)]="user.phone"></ion-input>
+      </ion-item>
+      </ion-list>
+
+      <button ion-button full class="btn emailx" round icon-start (click)="tab()">
+         <ion-icon name="phone-portrait"></ion-icon> Connect with Phone
+         </button> -->
+    <button ion-button full class="btn emailx" round icon-start (click)="login()">
+       <ion-icon name="mail"></ion-icon> Connect with Email
+      </button>
+<ion-row text-center *ngIf="err">
+  <ion-col >
+      <p style="color:rgb(255, 0, 0);background-color:rgba(255, 255, 255, 0.781);padding:3px;border-radius: 30px"> <small> {{err}} </small></p>
+  </ion-col>
+</ion-row>
+<ion-row text-center (click)="signup()">
+   <ion-col style="color:white">
+     Don't Have an account? <b class="signup" >Signup Now!</b>
+   </ion-col>
+</ion-row>
+    <div class="fixed-bottom">
+        <!-- <button ion-button full class="btn fb" round icon-start (click)="tab()">
+                 <img src="assets/imgs/ic_facebook.png">Connect with Facebook
+        </button>
+        <button ion-button full class="btn google" round icon-start (click)="tab()">
+                 <img src="assets/imgs/ic_google.png">Connect with Google
+            </button> -->
+        <p text-center class="text-white">By clicking start, you are agree to our <strong>terms & condition</strong></p>
+    </div>
+</ion-content>

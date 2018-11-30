@@ -1,16 +1,230 @@
-// http://ionicframework.com/docs/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+    //font
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+    * {
+        font-family: 'Comfortaa', cursive;
+        font-weight: 400;
+    }
+    
+    .scroll-content {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    
+    $red: #ff0c00;
+    $tab-btn: $red;
+    $green: #1bd91b;
+    $black: #000000;
+    $white: #ffffff;
+    $bg-theme: #f8f8f8;
+    $text-light: #e2e2e2;
+    $thime-button-bg:#ff0c00;
+    $header-bg:#fff;
+    $header-text-color:#000;
+    $back-button-color:#ff0c00;
+    $green-color:#1bd91b;
+    $black-color:#000;
+    $text-darck:#433f3f;
+    .bg-theme {
+        background: $bg-theme !important;
+    }
+    
+    .text-light {
+        color: $text-light;
+    }
+    
+    .text-red {
+        color: $red !important;
+    }
+    
+    .text-darck {
+        color: $text-darck !important;
+    }
+    
+    .text-black {
+        color: $black-color !important;
+    }
+    
+    .fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+    
+    .text-white {
+        color: $white;
+    }
+    
+    .text-ellipsis {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    //Header css
+    .header {
+        &::after {
+            display: none;
+        }
+        .toolbar {
+            .toolbar-background {
+                background: $header-bg !important;
+                border: none !important;
+            }
+            .toolbar-content {
+                .toolbar-title {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    color: $header-text-color !important;
+                    padding: 0 5px 1px;
+                    padding-left: 10px;
+                    text-align: left !important;
+                    text-transform: none !important;
+                    font-size: 1.6rem !important;
+                    font-weight: bold;
+                    span {
+                        margin-left: auto;
+                        ion-icon {
+                            font-size: 2.3rem;
+                        }
+                        padding-top: 6px;
+                    }
+                }
+            }
+            .back-button {
+                color: $back-button-color !important;
+                min-width: 30px;
+                margin-left: 10px;
+                padding: 0;
+                text-align: center;
+                position: absolute;
+                z-index: 1;
+                .ion-md-arrow-back:before {
+                    content: "\f3cf";
+                }
+                .back-button-icon-ios {
+                    font-size: 2.3rem;
+                }
+                .back-button-text {
+                    display: none !important;
+                }
+            }
+            &.toolbar-ios {
+                min-height: 59px;
+                ion-title {
+                    padding: 0 !important;
+                    position: relative;
+                }
+            }
+        }
+        &.bg-transparent {
+            .toolbar-background {
+                background: rgba(0, 0, 0, 0) !important;
+            }
+        }
+    }
+    
+    .button {
+        text-transform: none;
+        font-size: 1.37rem;
+        letter-spacing: .5px;
+        font-weight: 400;
+        letter-spacing: .5px;
+        &.btn {
+            height: 5rem;
+        }
+        background: $thime-button-bg !important;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $thime-button-bg !important;
+        }
+    }
+    
+    //bottom tab css
+    .tab-button {
+        opacity: 1 !important;
+        &[aria-selected=true] .tab-button-icon {
+            color: $tab-btn !important;
+        }
+    }
+    
+    .tab-button[aria-selected=true]::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: $tab-btn !important;
+        margin: auto;
+    }
+    
+    .ios {
+        .tab-button[aria-selected=true]::after {
+            top: -1px;
+        }
+    }
+    
+    .tabs-wp {
+        .tab-button {
+            border-bottom: none !important;
+        }
+    }
+    
+    .tabs-wp {
+        .tab-button[aria-selected=true]::after {
+            bottom: -44px;
+        }
+    }
+    
+    .tabs-ios .tab-button-icon {
+        line-height: 30px;
+        font-size: 22px;
+    }
+    
+    .tabs-ios .tab-button.icon-only {
+        overflow: visible;
+    }
+    
+    [dir="rtl"] {
+        .header .toolbar .toolbar-content .toolbar-title span {
+            margin-right: auto;
+            margin-left: 0;
+        }
+        page-editprofile {
+            .list .item {
+                .item-inner {
+                    .label {
+                        padding-right: 0 !important;
+                        margin-right: 0 !important;
+                        margin-left: auto !important;
+                    }
+                    ion-input {
+                        margin-left: 0;
+                        margin-right: auto;
+                        max-width: 50%;
+                    }
+                }
+                &.item-select .select .select-text {
+                    right: auto;
+                    left: 0px;
+                    width: calc(50% - 16px);
+                    padding-right: 0;
+                    margin-left: 16px;
+                }
+            }
+        }
+        page-setting .list .item.item-range .range [range-right] {
+            text-align: left;
+        }
+        .toolbar-content .toolbar-title span.profile-name {
+            padding-right: 15px !important;
+        }
+        page-contactlist .list.unread .item::after {
+            right: 12px;
+        }
+    }
